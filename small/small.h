@@ -269,22 +269,22 @@ small_stats(struct small_alloc *alloc,
 
 #if defined(__cplusplus)
 } /* extern "C" */
-#include "exception.h"
+/* #include "exception.h" */
 
-static inline void *
-smalloc_xc(struct small_alloc *alloc, size_t size, const char *where)
-{
-	void *ptr = smalloc(alloc, size);
-	if (ptr == NULL)
-		tnt_raise(OutOfMemory, size, "slab allocator", where);
-	return ptr;
-}
+/* static inline void * */
+/* smalloc_xc(struct small_alloc *alloc, size_t size, const char *where) */
+/* { */
+/* 	void *ptr = smalloc(alloc, size); */
+/* 	if (ptr == NULL) */
+/* 		tnt_raise(OutOfMemory, size, "slab allocator", where); */
+/* 	return ptr; */
+/* } */
 
-static inline void *
-smalloc0_xc(struct small_alloc *alloc, size_t size, const char *where)
-{
-	return memset(smalloc_xc(alloc, size, where), 0, size);
-}
+/* static inline void * */
+/* smalloc0_xc(struct small_alloc *alloc, size_t size, const char *where) */
+/* { */
+/* 	return memset(smalloc_xc(alloc, size, where), 0, size); */
+/* } */
 
 #endif /* defined(__cplusplus) */
 
