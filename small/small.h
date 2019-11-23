@@ -87,7 +87,7 @@ extern "C" {
 /** Basic constants of small object allocator. */
 enum {
 	/** How many stepped pools there is. */
-	STEP_POOL_MAX = 32,
+	STEP_POOL_MAX = 1,
 	/** How many factored pools there can be. */
 	FACTOR_POOL_MAX = 256,
 };
